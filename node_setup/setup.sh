@@ -5,6 +5,7 @@ apt update
 # install some useful stuff
 apt install -y \
   sudo \
+  curl \
   vim \
   less \
   htop \
