@@ -19,5 +19,5 @@ sed -i "s/%sudo\tALL=(ALL:ALL) ALL/%sudo\tALL=(ALL:ALL) NOPASSWD:ALL/" /etc/sudo
 # fix .bashrc
 sed -i "s/#alias ll='ls -l'/alias ll='ls -lah'/" /etc/skel/.bashrc
 cp -f /etc/skel/.bashrc /root/.bashrc
-. /root/.bashrc
+source /root/.bashrc
 
