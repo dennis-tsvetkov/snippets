@@ -34,3 +34,4 @@ bash ./install.sh
 cp -r ~/.vim /etc/skel/
 cp ~/.vimrc /etc/skel/
 
+
