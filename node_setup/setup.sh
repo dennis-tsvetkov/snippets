@@ -21,6 +21,12 @@ apt install -y \
 sed -i "s/%sudo\tALL=(ALL:ALL) ALL/%sudo\tALL=(ALL:ALL) NOPASSWD:ALL/" /etc/sudoers
 
 # fix .bashrc
+echo -e "
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+" >> /etc/skel/.bashrc
+
 echo 'export PS1="\u@\h \[\033[1;34m\]\w\[\033[0;33m\]\$(parse_git_branch)\[\033[00m\] $ "' >> /etc/skel/.bashrc
 echo 'shopt -s histappend' >> /etc/skel/.bashrc
 sed -i "s/#alias ll='ls -l'/alias ll='ls -lah'/" /etc/skel/.bashrc
@@ -31,7 +37,7 @@ cd ~
 git clone https://github.com/dennis-tsvetkov/vimcolors.git
 cd vimcolors
 bash ./install.sh
+cd ~
 cp -r ~/.vim /etc/skel/
 cp ~/.vimrc /etc/skel/
-
 
