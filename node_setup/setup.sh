@@ -6,6 +6,7 @@ apt update
 apt install -y \
   sudo \
   curl \
+  rsync \
   vim \
   less \
   htop \
