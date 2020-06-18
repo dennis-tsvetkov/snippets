@@ -27,7 +27,7 @@ parse_git_branch() {
 }
 " >> /etc/skel/.bashrc
 
-echo 'export PS1="\u@\h \[\033[1;34m\]\w\[\033[0;33m\]\$(parse_git_branch)\[\033[00m\] $ "' >> /etc/skel/.bashrc
+echo 'export PS1="\[\e[37m\]\u@\h\[\e[m\]:\[\033[1;34m\]\w\[\033[0;33m\]$(parse_git_branch)\[\033[00m\] $ "' >> /etc/skel/.bashrc
 echo 'shopt -s histappend' >> /etc/skel/.bashrc
 sed -i "s/#alias ll='ls -l'/alias ll='ls -lah'/" /etc/skel/.bashrc
 cp -f /etc/skel/.bashrc /root/.bashrc
