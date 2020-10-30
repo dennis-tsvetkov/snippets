@@ -1,4 +1,4 @@
-#nginx SSL termination
+# nginx SSL termination
 
 and redirect to upstream backend
 
