@@ -13,4 +13,5 @@ Default setting is the following:
 
 #### How to run
 Copy, paste, hit enter
+
 `sudo apt update && sudo apt install fio && curl https://raw.githubusercontent.com/dennis-tsvetkov/snippets/master/test-fio/test-fio.sh | sh`
